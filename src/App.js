@@ -1,38 +1,48 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { Switch, Route } from "react-router-dom";
+import { US1, US2} from "./components/UserMethods";
+import { US3, US4_Home, US4_Rental, US4_Tenant, US5, US7} from "./components/AdminMethods"
 
 const Home = () => {
   return (
       <>
         <Navbar />
         <section className="hero-section">
-          <p>Subscribe to </p>
-          <h1>Thapa Technical Home Page</h1>
+          <p>Hello Exam!</p>
+          <h1>Beklager for manglen af Login!</h1>
         </section>
       </>
   );
 };
 
-const About = () => {
+const User = () => {
   return (
       <>
         <Navbar />
-        <section className="hero-section">
-          <p>Welcome to </p>
-          <h1>Thapa Technical About Page</h1>
+        <section className="hero-section" style={{marginTop: "10em"}}>
+          <p>User Metoder!</p>
+          <h1>Her sker der lidt magi</h1>
+            <US1 />
+            <US2 />
         </section>
       </>
   );
 };
 
-const Service = () => {
+const Admin = () => {
   return (
       <>
         <Navbar />
-        <section className="hero-section">
-          <p>Welcome to </p>
-          <h1>Thapa Technical Service Page</h1>
+        <section className="hero-section" style={{marginTop: "60em"}}>
+          <p>Admin Metoder!</p>
+          <h1>Her sker der lidt mere magi!</h1>
+            <US3 />
+            <US4_Home />
+            <US4_Rental />
+            <US4_Tenant />
+            <US5 />
+            <US7 />
         </section>
       </>
   );
@@ -43,8 +53,8 @@ const Contact = () => {
       <>
         <Navbar />
         <section className="hero-section">
-          <p>Welcome to </p>
-          <h1>Thapa Technical Contact Page</h1>
+          <h1>For et 12 tal</h1>
+          <p>Så giv mig et kald på 20966026 - Eller fang mig i fitten</p>
         </section>
       </>
   );
@@ -57,12 +67,12 @@ const App = () => {
           <Home />
         </Route>
 
-        <Route path="/about">
-          <About />
+        <Route path="/user">
+          <User />
         </Route>
 
-        <Route path="/service">
-          <Service />
+        <Route path="/admin">
+          <Admin />
         </Route>
 
         <Route path="/contact">
